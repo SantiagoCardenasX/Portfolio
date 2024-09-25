@@ -1,0 +1,106 @@
+body {
+  margin: 0; /* Remove default margin */
+  font-family: "Montserrat", sans-serif;
+  padding-left: 280px;
+}
+
+/* Sidebar Styles */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 280px;
+  overflow-y: auto;
+  background-color: #040b14;
+  color: white;
+  z-index: 1000;
+  transition: transform 0.3s ease; /* Añade transición para animación */
+}
+
+.navbar-toggler {
+    position: fixed; /* Coloca el botón de manera absoluta */
+    top: 20px; /* Ajusta la posición vertical */
+    right: 20px; /* Ajusta la posición horizontal */
+    z-index: 1050; /* Asegúrate de que esté por encima del sidebar */
+    color: #0d6efd;
+}
+
+.sidebar.hidden {
+  transform: translateX(-100%); /* Mueve el sidebar fuera de la vista */
+}
+
+.img-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.img-hover:hover {
+  transform: scale(1.1); /* Scale image up */
+  box-shadow: 0 4px 20px rgba(131, 115, 115, 0.5); /* Add shadow */
+}
+
+.social-links a {
+  margin: 0 10px; /* Add some space between icons */
+  color: white; /* Icon color */
+  font-size: 20px; /* Icon size */
+}
+
+.social-links a:hover {
+  color: #0d6efd; /* Change color on hover */
+}
+
+#sections {
+  min-height: 400px;
+}
+
+@media (max-width: 992px) {
+  body {
+    padding: 0;
+  }
+
+  .sidebar {
+    transform: translateX(-100%); /* Esconde el sidebar por defecto */
+  }
+
+  .sidebar.active {
+    transform: translateX(0); /* Muestra el sidebar cuando está activo */
+  }
+}
+
+/* Cover Styles */
+
+.cover{
+    position: relative;
+}
+
+.cover h1 {
+  font-size: 64px;
+}
+
+.cover p {
+  font-size: 32px;
+}
+
+#cover-div {
+  background-image: url(images/Cover.jpg);
+  background-size: cover; /* O 'contain' según lo que necesites */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen en el elemento */
+}
+
+/* About Me Styles */
+
+.about-me {
+  min-height: 100vh;
+}
+
+.about-me ul{
+    min-height: 200px;
+}
+
+/* Skills Styles */
+
+.skills{
+    color: white;
+}
