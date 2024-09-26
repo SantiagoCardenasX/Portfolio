@@ -153,6 +153,11 @@ body {
     height: 90%;
 }
 
+.resume .iframe{
+    height: 100%;
+    width: 100%;
+}
+
 /* Contact */
 
 #contact{
@@ -160,6 +165,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    min-height: 100vh;
 }
 
 .contact .container{
