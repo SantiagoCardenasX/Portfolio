@@ -19,12 +19,17 @@ body {
   transition: transform 0.3s ease; /* Añade transición para animación */
 }
 
+.sidebar li:hover {
+  background-color: #0d6efd;
+  border-radius: var(--bs-border-radius);
+}
+
 .navbar-toggler {
-    position: fixed; /* Coloca el botón de manera absoluta */
-    top: 20px; /* Ajusta la posición vertical */
-    right: 20px; /* Ajusta la posición horizontal */
-    z-index: 1050; /* Asegúrate de que esté por encima del sidebar */
-    color: #0d6efd;
+  position: fixed; /* Coloca el botón de manera absoluta */
+  top: 20px; /* Ajusta la posición vertical */
+  right: 20px; /* Ajusta la posición horizontal */
+  z-index: 1050; /* Asegúrate de que esté por encima del sidebar */
+  color: #0d6efd;
 }
 
 .sidebar.hidden {
@@ -70,8 +75,8 @@ body {
 
 /* Cover Styles */
 
-.cover{
-    position: relative;
+.cover {
+  position: relative;
 }
 
 .cover h1 {
@@ -95,12 +100,37 @@ body {
   min-height: 100vh;
 }
 
-.about-me ul{
-    min-height: 200px;
+.about-me ul {
+  min-height: 200px;
 }
 
 /* Skills Styles */
 
-.skills{
-    color: white;
+.skills {
+  color: white;
+}
+
+.skills-container {
+  min-height: 650px;
+}
+
+@media (max-width: 992px) {
+  #skills-container {
+    display: block;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+    justify-content: flex-start !important; /* Distribuye los elementos uniformemente */
+  }
+
+  .skills-container .row {
+    margin-left: 0; /* Asegura que no haya márgenes no deseados */
+    margin-right: 0;
+  }
+
+  .skills-container .row > div {
+    flex: 0 0 48%; /* Ajusta para que dos columnas ocupen el 48% del ancho con espacio entre ellas */
+    margin-bottom: 15px; /* Añade un margen inferior para dar separación */
+    text-align: center; /* Centra las imágenes */
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 }
