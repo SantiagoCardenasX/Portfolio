@@ -106,6 +106,9 @@ body {
 
 /* Skills Styles */
 
+#skills {
+  min-height: 100vh;
+}
 .skills {
   color: white;
 }
@@ -136,51 +139,62 @@ body {
 }
 
 /* Projects */
-
-.carousel{
-    color: black;
+/* Elimina el valor de altura fija en las imágenes */
+.carousel-item img {
+  width: 100%;
+  height: auto; /* Permite que la altura de la imagen se ajuste automáticamente */
+  max-height: 80vh; /* Limita la altura máxima de las imágenes al 80% del viewport */
+  object-fit: cover; /* Mantiene la proporción y rellena el espacio disponible */
 }
 
-.custom-tooltip {
-    background-color: var(--bd-violet-bg);
-    color: var(--bs-white);
-  }
+.projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
+}
+
+.carousel {
+  width: 100%; /* Ajusta el carrusel al 100% del contenedor */
+  max-width: 1200px; /* Limita el tamaño máximo del carrusel */
+}
 
 /* Resume */
 
-.resume .container{
-    width: 100%;
-    height: 90%;
+.resume .container {
+  width: 100%;
+  height: 90%;
 }
 
-.resume .iframe{
-    height: 100%;
-    width: 100%;
+.resume .iframe {
+  height: 100%;
+  width: 100%;
 }
 
 /* Contact */
 
-#contact{
-    background-image: url(images/cover-contact.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    min-height: 100vh;
+#contact {
+  background-image: url(images/cover-contact.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
 }
 
-.contact .container{
-    width: 66%;
+.contact .container {
+  width: 66%;
 }
 
-.contact .form-control{
-    border: solid 2px black;
+.contact .form-control {
+  border: solid 2px black;
 }
 
-.contact button{
-    margin: 0 auto;
+.contact button {
+  margin: 0 auto;
 }
 
-.contact iframe{
-    border: 1px solid black;
-    border-radius: 5px;
+.contact iframe {
+  border: 1px solid black;
+  border-radius: 5px;
 }
