@@ -83,15 +83,44 @@ body {
   font-size: 64px;
 }
 
-.cover p {
+.cover span {
   font-size: 32px;
 }
 
 #cover-div {
-  background-image: url(images/Cover.jpg);
-  background-size: cover; /* O 'contain' según lo que necesites */
-  background-repeat: no-repeat; /* Evita que la imagen se repita */
-  background-position: center; /* Centra la imagen en el elemento */
+  background-color: #222222;
+}
+
+.subtitle .text {
+  position: relative;
+  color: #0D6EFD;
+  font-weight: 600;
+  background-color: #222222;
+}
+
+.subtitle .text.first-text{
+  color: white;
+}
+
+.text.second-text:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #222222;
+  border-left: 2px solid white;
+  animation: animate 4s steps(12) infinite;
+}
+
+@keyframes animate {
+  40%, 60%{
+    left: calc(100% + 4px);
+  }
+  100%{
+    left: 0%;
+  }
 }
 
 /* About Me Styles */

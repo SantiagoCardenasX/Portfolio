@@ -47,3 +47,22 @@ const tooltipTriggerList = document.querySelectorAll(
 const tooltipList = [...tooltipTriggerList].map(
   (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
 );
+
+// Title Animation
+
+const text = document.querySelector(".second-text");
+
+const textLoad = () => {
+  setTimeout(() => {
+    text.textContent = "Software Developer";
+  }, 0);
+  setTimeout(() => {
+    text.textContent = "Freelancer";
+  }, 4000);
+  setTimeout(() => {
+    text.textContent = "Problem Solver";
+  }, 8000);
+};
+
+textLoad();
+setInterval(textLoad, 12000);
