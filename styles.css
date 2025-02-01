@@ -137,6 +137,12 @@ body {
   min-height: 200px;
 }
 
+@media (max-width: 992px) {
+  #about-me-list-two {
+    margin-top: 0px !important;
+  }
+}
+
 /* Skills Styles */
 
 #skills {
