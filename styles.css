@@ -91,18 +91,18 @@ body {
   background-color: #222222;
 }
 
-.subtitle{
+.subtitle {
   overflow: hidden;
 }
 
 .subtitle .text {
   position: relative;
-  color: #0D6EFD;
+  color: #0d6efd;
   font-weight: 600;
   background-color: #222222;
 }
 
-.subtitle .text.first-text{
+.subtitle .text.first-text {
   color: white;
 }
 
@@ -119,10 +119,11 @@ body {
 }
 
 @keyframes animate {
-  40%, 60%{
+  40%,
+  60% {
     left: calc(100% + 4px);
   }
-  100%{
+  100% {
     left: 0%;
   }
 }
@@ -178,13 +179,6 @@ body {
 }
 
 /* Projects */
-/* Elimina el valor de altura fija en las imágenes */
-.carousel-item img {
-  width: 100%;
-  height: auto; /* Permite que la altura de la imagen se ajuste automáticamente */
-  max-height: 80vh; /* Limita la altura máxima de las imágenes al 80% del viewport */
-  object-fit: cover; /* Mantiene la proporción y rellena el espacio disponible */
-}
 
 .projects {
   display: flex;
@@ -194,10 +188,50 @@ body {
   min-height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
 }
 
-.carousel {
-  width: 100%; /* Ajusta el carrusel al 100% del contenedor */
-  max-width: 1200px; /* Limita el tamaño máximo del carrusel */
+/* Hover effect for cards */
+.custom-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.custom-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Define the animation keyframes */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Initially set the elements to be invisible and slightly below the viewport */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s, transform 1s;
+}
+
+/* When the element becomes visible, apply the fadeInUp animation */
+.scroll-animate.visible {
+  animation: fadeInUp 1s forwards;
+}
+
+/* Hover effects on cards */
+.custom-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
 
 /* Resume */
 

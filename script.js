@@ -66,3 +66,22 @@ const textLoad = () => {
 
 textLoad();
 setInterval(textLoad, 12000);
+
+// Create an observer that will trigger when elements come into view
+document.addEventListener("DOMContentLoaded", function () {
+  const elements = document.querySelectorAll(".scroll-animate");
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target); // Stop observing once the element is in view
+        }
+      });
+    },
+    { threshold: 0.2 } // Trigger when 20% of the element is visible
+  );
+
+  elements.forEach((element) => observer.observe(element));
+});
